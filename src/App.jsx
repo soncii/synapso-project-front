@@ -67,19 +67,19 @@ const App = () => {
                     <div className={`flex flex-col col-start-2 flex-1 ${isAuthRoute ? 'max-w-[650px] w-full' : ''}`}>
                         <Suspense fallback={<Loader/>}>
                             <Routes>
-                                <Route path="/" element={<Dashboard/>}/>
-                                <Route path="/dashboard-c" element={<DashboardC/>}/>
-                                <Route path="/dashboard-d" element={<DashboardD/>}/>
+                                <Route path="/" element={<Products/>}/>
+                                {/*<Route path="/dashboard-c" element={<DashboardC/>}/>*/}
+                                {/*<Route path="/dashboard-d" element={<DashboardD/>}/>*/}
                                 <Route path="/experiments" element={<Products/>}/>
                                 <Route path="/product" element={<Product/>}/>
                                 <Route path="/create-recall" element={<CreateRecall/>}/>
                                 <Route path="/create-recognition" element={<CreateRecognition/>}/>
-                                <Route path="/orders" element={<Orders/>}/>
-                                <Route path="/order-details" element={<OrderDetails/>}/>
-                                <Route path="/invoice" element={<Invoice/>}/>
-                                <Route path="/sales" element={<Sales/>}/>
-                                <Route path="/reviews" element={<Reviews/>}/>
-                                <Route path="/settings" element={<Settings/>}/>
+                                {/*<Route path="/orders" element={<Orders/>}/>*/}
+                                {/*<Route path="/order-details" element={<OrderDetails/>}/>*/}
+                                {/*<Route path="/invoice" element={<Invoice/>}/>*/}
+                                {/*<Route path="/sales" element={<Sales/>}/>*/}
+                                {/*<Route path="/reviews" element={<Reviews/>}/>*/}
+                                {/*<Route path="/settings" element={<Settings/>}/>*/}
                                 <Route path="/sign-in" element={<SignIn/>}/>
                                 <Route path="/sign-up" element={<SignUp/>}/>
                                 <Route path="*" element={<Navigate to="/404"/>}/>

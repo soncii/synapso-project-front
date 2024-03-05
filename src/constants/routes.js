@@ -26,11 +26,11 @@ const ROUTES = {
         {
             path: '/404',
             name: 'Dashboard',
-            icon: 'fa-solid fa-house'
+            icon: 'objects-column'
         },
         {
             name: 'Experiments',
-            icon: 'bag-shopping',
+            icon: 'square-list',
             links: [
                 {
                     path: '/create-recall',
@@ -59,7 +59,7 @@ const ROUTES = {
         {
             path: '/sales',
             name: 'Guideline',
-            icon: 'badge-percent'
+            icon: 'square-list'
         },
         // {
         //     path: '/reviews',
@@ -99,4 +99,4 @@ const ROUTES = {
     ]
 }
 
-export default ROUTES
+export default <ROUTES></ROUTES>
