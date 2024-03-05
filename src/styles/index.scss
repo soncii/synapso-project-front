@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "vars";
+@import "typo";
+@import "global";
+@import "elements";
+
+@import 'react-big-calendar/lib/sass/styles';
