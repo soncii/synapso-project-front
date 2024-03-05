@@ -7,6 +7,7 @@ import {lazy, Suspense} from 'react';
 // styles
 import '@styles/index.scss';
 import 'react-toastify/dist/ReactToastify.min.css';
+import 'react-toastify/dist/ReactToastify.css';
 import 'react-grid-layout/css/styles.css';
 import ThemeStyles from '@styles/theme';
 
@@ -31,7 +32,7 @@ import Loader from '@components/Loader';
 
 // lazy load
 const Dashboard = lazy(() => import('@pages/DashboardA'));
-// const DashboardB = lazy(() => import('@pages/DashboardB'));
+const DashboardB = lazy(() => import('@pages/DashboardB'));
 const DashboardC = lazy(() => import('@pages/DashboardC'));
 const DashboardD = lazy(() => import('@pages/DashboardD'));
 const Products = lazy(() => import('@pages/Products'));
