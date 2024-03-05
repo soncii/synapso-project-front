@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react'
 import svgrPlugin from 'vite-plugin-svgr'
 import macrosPlugin from 'vite-plugin-babel-macros'
 import eslint from 'vite-plugin-eslint'
+
 // https://vitejs.dev/config/
 
 export default defineConfig({

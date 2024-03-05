@@ -1,0 +1,4 @@
+.Toastify__toast--default {
+    background: white;
+    color: black; /* Changing text color to black for better visibility on white background */
+  }

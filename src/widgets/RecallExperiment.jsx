@@ -67,7 +67,7 @@ const RecallExperiment = () => {
                 },
                 body: JSON.stringify(experimentData) // Sending experimentData instead of payload
             });
-
+    
             if (response.ok) {
                 toast.success('Experiment created successfully');
             } else {
@@ -164,11 +164,11 @@ const RecallExperiment = () => {
                             <div className="field-wrapper">
                                 <label className="field-label" htmlFor="isFreeRecall">
                                     Is free recall?
-                                </label>
-                                <input className={classNames('field-input', {'field-input--error': errors.name})}
-                                       type="checkbox"
-                                       checked={isFreeRecall}
-                                       onChange={e => setIsFreeRecall(e.target.checked)} />
+                                    </label>
+                                    <input className={classNames('field-input', {'field-input--error': errors.name})}
+                                    type="checkbox"
+                                    checked={isFreeRecall}
+                                    onChange={e => setIsFreeRecall(e.target.checked)} />
                             </div>
                         </div>
                     </div>
@@ -178,12 +178,12 @@ const RecallExperiment = () => {
                         <div className="field-wrapper">
                             <label className="field-label" htmlFor="interStimuliDelay">
                                 Inter Stimuli Delay
-                            </label>
+                                </label>
                             <input className={classNames('field-input', {'field-input--error': errors.name})}
-                                   type="number"
-                                   placeholder="Type a number"
-                                   value={interStimuliDelay}
-                                   onChange={e => setInterStimuliDelay(e.target.value)} />
+                                    type="number"
+                                    placeholder="Type a number"
+                                    value={interStimuliDelay}
+                                    onChange={e => setInterStimuliDelay(e.target.value)} />
                         </div>
                     </div>
 
@@ -194,11 +194,11 @@ const RecallExperiment = () => {
                             <div className="field-wrapper">
                                 <label className="field-label" htmlFor="isDistractionEnabled">
                                     Enable Distraction
-                                </label>
-                                <input className={classNames('field-input', {'field-input--error': errors.name})}
-                                       type="checkbox"
-                                       checked={isDistractionEnabled}
-                                       onChange={e => setIsDistractionEnabled(e.target.checked)} />
+                                    </label>
+                                    <input className={classNames('field-input', {'field-input--error': errors.name})}
+                                    type="checkbox"
+                                    checked={isDistractionEnabled}
+                                    onChange={e => setIsDistractionEnabled(e.target.checked)} />
                             </div>
 
                             {isDistractionEnabled && (
@@ -206,12 +206,12 @@ const RecallExperiment = () => {
                                     <div className="field-wrapper">
                                         <label className="field-label" htmlFor="distractionDuration">
                                             Enter Distraction Duration
-                                        </label>
-                                        <input className={classNames('field-input', {'field-input--error': errors.name})}
-                                               type="number"
-                                               placeholder="Distraction Duration"
-                                               value={distractionDuration}
-                                               onChange={e => setDistractionDuration(e.target.value)} />
+                                            </label>
+                                            <input className={classNames('field-input', {'field-input--error': errors.name})}
+                                            type="number"
+                                            placeholder="Distraction Duration"
+                                            value={distractionDuration}
+                                            onChange={e => setDistractionDuration(e.target.value)} />
                                     </div>
 
                                     <label className="field-label" htmlFor="distractionType">
@@ -236,19 +236,19 @@ const RecallExperiment = () => {
                                     />
 
                                     <div className="field-wrapper">
-                                        <label className="field-label" htmlFor="distractionText">
-                                            Enter Distraction Text
-                                        </label>
-                                        <input className={classNames('field-input', {'field-input--error': errors.name})}
-                                               type="text"
-                                               placeholder="Distraction Text (Do not type anything, if it's math problem)"
-                                               value={distractionText}
-                                               onChange={e => setDistractionText(e.target.value)} />
+                                            <label className="field-label" htmlFor="distractionText">
+                                                Enter Distraction Text
+                                                </label>
+                                                <input className={classNames('field-input', {'field-input--error': errors.name})}
+                                                type="text"
+                                                placeholder="Distraction Text (Do not type anything, if it's math problem)"
+                                                value={distractionText}
+                                                onChange={e => setDistractionText(e.target.value)} />
                                     </div>
                                 </>
                             )}
-                        </div>
                     </div>
+                </div>
 
                 </div>
                 <div className="card-container card-container--light p-4 rounded-2xl flex flex-col gap-3 md:gap-5">
@@ -312,11 +312,11 @@ const RecallExperiment = () => {
                         <button style={{ marginTop: '20px' }}
                                 type="button"
                                 onClick={() => {setDataFields([...dataFields, { dispdata: '', cue: '', delay: '' }]);
-                                }}>Add More Fields</button>
+                        }}>Add More Fields</button>
                     </div>
                     <div className="grid grid-cols-2 gap-4 md:gap-6 md:flex md:ml-auto">
-                        <button
-                            className="btn btn--base md:w-[120px]"
+                        <button 
+                            className="btn btn--base md:w-[120px]" 
                             type="button" // Set type to button to prevent form submission
                             onClick={handleReset} // Call handleReset function on click
                         >
