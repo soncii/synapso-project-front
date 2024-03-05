@@ -99,4 +99,4 @@ const ROUTES = {
     ]
 }
 
-export default <ROUTES></ROUTES>
+export default ROUTES
