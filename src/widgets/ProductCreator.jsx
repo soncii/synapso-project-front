@@ -153,7 +153,7 @@ const ProductCreator = () => {
                             </div>
                             <div className="field-wrapper">
                                 <label className="field-label" htmlFor="recallexpinstr">
-                                    Pre-Recall Stage Instruction
+                                    Pre-Recognition Stage Instruction
                                 </label>
                                 <textarea className="field-input !h-[88px] !py-4"
                                           id="recallexpinstr"
