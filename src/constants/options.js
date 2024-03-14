@@ -17,6 +17,11 @@ export const PRODUCT_CATEGORIES = [
     {value: 'sounds', label: 'Sounds'}
 ]
 
+export const GENDER = [
+    {value: 'male', label: 'Male'},
+    {value: 'female', label: 'Female'}
+]
+
 export const DISTRACTION_TYPES = [
     { value: 'text', label: 'Text' },
     { value: 'math', label: 'Math Problem' }
