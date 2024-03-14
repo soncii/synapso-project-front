@@ -1,3 +1,7 @@
+const logout = () => {
+    localStorage.removeItem('authToken'); // Clear the authentication token
+};
+
 const ROUTES = {
     main: [
         // {
@@ -87,14 +91,10 @@ const ROUTES = {
     ],
     secondary: [
         {
-            path: '/404',
-            name: 'Settings',
-            icon: 'gear'
-        },
-        {
             path: '/sign-in',
             name: 'Logout',
-            icon: 'arrow-right-from-bracket'
+            icon: 'arrow-right-from-bracket',
+            onClick: logout
         }
     ]
 }

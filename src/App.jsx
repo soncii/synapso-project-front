@@ -29,9 +29,9 @@ import {ToastContainer} from 'react-toastify';
 import ScrollToTop from '@components/ScrollToTop';
 import Sidebar from '@components/Sidebar';
 import Loader from '@components/Loader';
+import PrivateRoute from '@components/PrivateRoute';
 
 // lazy load
-const Dashboard = lazy(() => import('@pages/DashboardA'));
 const DashboardB = lazy(() => import('@pages/DashboardB'));
 const DashboardC = lazy(() => import('@pages/DashboardC'));
 const DashboardD = lazy(() => import('@pages/DashboardD'));
@@ -53,10 +53,6 @@ const App = () => {
     const isAuthRoute = useAuthRoute();
     const {theme} = useTheme();
 
-    // Google Analytics init
-    const gaKey = import.meta.env.VITE_GA;
-    gaKey && ReactGA.initialize(gaKey);
-
     return (
         <SidebarProvider>
             <ThemeProvider theme={{theme: theme}}>
@@ -66,25 +62,27 @@ const App = () => {
                 <div className={`app ${isAuthRoute ? 'fluid' : ''}`}>
                     {!isAuthRoute && <Sidebar/>}
                     <div className={`flex flex-col col-start-2 flex-1 ${isAuthRoute ? 'max-w-[650px] w-full' : ''}`}>
-                        <Suspense fallback={<Loader/>}>
+                        <Suspense fallback={<Loader />}>
                             <Routes>
-                                <Route path="/" element={<Products/>}/>
-                                {/*<Route path="/dashboard-c" element={<DashboardC/>}/>*/}
-                                {/*<Route path="/dashboard-d" element={<DashboardD/>}/>*/}
-                                <Route path="/experiments" element={<Products/>}/>
-                                <Route path="/product" element={<Product/>}/>
-                                <Route path="/create-recall" element={<CreateRecall/>}/>
-                                <Route path="/create-recognition" element={<CreateRecognition/>}/>
-                                {/*<Route path="/orders" element={<Orders/>}/>*/}
-                                {/*<Route path="/order-details" element={<OrderDetails/>}/>*/}
-                                {/*<Route path="/invoice" element={<Invoice/>}/>*/}
-                                {/*<Route path="/sales" element={<Sales/>}/>*/}
-                                {/*<Route path="/reviews" element={<Reviews/>}/>*/}
-                                {/*<Route path="/settings" element={<Settings/>}/>*/}
-                                <Route path="/sign-in" element={<SignIn/>}/>
-                                <Route path="/sign-up" element={<SignUp/>}/>
-                                <Route path="*" element={<Navigate to="/404"/>}/>
-                                <Route path="/404" element={<PageNotFound/>}/>
+                                <Route path="/" element={<PrivateRoute />}>
+                                    <Route path="/dashboard-b" element={<DashboardB />} />
+                                    <Route path="/dashboard-c" element={<DashboardC />} />
+                                    <Route path="/dashboard-d" element={<DashboardD />} />
+                                    <Route path="/experiments" element={<Products />} />
+                                    <Route path="/product" element={<Product />} />
+                                    <Route path="/create-recall" element={<CreateRecall />} />
+                                    <Route path="/create-recognition" element={<CreateRecognition />} />
+                                    <Route path="/orders" element={<Orders />} />
+                                    <Route path="/order-details" element={<OrderDetails />} />
+                                    <Route path="/invoice" element={<Invoice />} />
+                                    <Route path="/sales" element={<Sales />} />
+                                    <Route path="/reviews" element={<Reviews />} />
+                                    <Route path="/settings" element={<Settings />} />
+                                    <Route path="/404" element={<PageNotFound />} />
+                                    <Route path="*" element={<Navigate to="/404" />} />
+                                </Route>
+                                <Route path="/sign-in" element={<SignIn />} />
+                                <Route path="/sign-up" element={<SignUp />} />
                             </Routes>
                         </Suspense>
                     </div>

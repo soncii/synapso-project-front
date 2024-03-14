@@ -13,8 +13,7 @@ export const REVIEWS_SORT = [
 
 export const PRODUCT_CATEGORIES = [
     {value: 'words', label: 'Words'},
-    {value: 'images', label: 'Images'},
-    {value: 'sounds', label: 'Sounds'}
+    {value: 'numbers', label: 'Numbers'}
 ]
 
 export const GENDER = [

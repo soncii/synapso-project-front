@@ -145,8 +145,9 @@ const Sidebar = () => {
                     {
                         ROUTES.secondary.map((route) => (
                             <NavLink key={route.name}
-                                     to={route.path}
-                                     className="nav-item">
+                                    to={route.path}
+                                    className="nav-item"
+                                    onClick={route.onClick ? route.onClick : () => {/* Navigate to route.path */}}>
                                 <span className="nav-icon relative w-[18px]">
                                     <i className={`icon icon-${route.icon}-regular`}/>
                                     <i className={`icon icon--active icon-${route.icon}-solid`}/>
