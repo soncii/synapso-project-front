@@ -51,13 +51,13 @@ const ROUTES = {
             icon: 'square-list',
             links: [
                 {
-                    path: '/orders',
+                    path: '/404',
                     name: 'TBD'
                 }
             ]
         },
         {
-            path: '/sales',
+            path: '/404',
             name: 'Guideline',
             icon: 'square-list'
         },
@@ -66,28 +66,28 @@ const ROUTES = {
         //     name: 'Reviews',
         //     icon: 'message-quote'
         // },
-        {
-            name: 'Pages',
-            icon: 'layer-group',
-            links: [
-                {
-                    path: '/sign-in',
-                    name: 'Sign In'
-                },
-                // {
-                //     path: '/sign-up',
-                //     name: 'Sign Up'
-                // },
-                {
-                    path: '/404',
-                    name: 'Page 404'
-                }
-            ]
-        }
+        // {
+        //     name: 'Pages',
+        //     icon: 'layer-group',
+        //     links: [
+        //         {
+        //             path: '/sign-in',
+        //             name: 'Sign In'
+        //         },
+        //         // {
+        //         //     path: '/sign-up',
+        //         //     name: 'Sign Up'
+        //         // },
+        //         {
+        //             path: '/404',
+        //             name: 'Page 404'
+        //         }
+        //     ]
+        // }
     ],
     secondary: [
         {
-            path: '/settings',
+            path: '/404',
             name: 'Settings',
             icon: 'gear'
         },
