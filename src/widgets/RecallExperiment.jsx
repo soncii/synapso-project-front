@@ -40,6 +40,7 @@ const RecallExperiment = () => {
         const experimentData = {
             name: formData.expname,
             instructionText: formData.expinstr,
+            recallInstructionText: formData.recallexpinstr,
             isDistractionEnabled: isDistractionEnabled,
             distractionType: formData.distractionType ? formData.distractionType.value : '',
             distractionText: distractionText,
@@ -154,6 +155,15 @@ const RecallExperiment = () => {
                                           id="expinstr"
                                           placeholder="Enter Experiment Instruction"
                                           {...register('expinstr')} />
+                            </div>
+                            <div className="field-wrapper">
+                                <label className="field-label" htmlFor="recallexpinstr">
+                                    Pre-Recall Stage Instruction
+                                </label>
+                                <textarea className="field-input !h-[88px] !py-4"
+                                          id="recallexpinstr"
+                                          placeholder="Please write the words you remember in the box below. Press start if you are ready to begin."
+                                          {...register('recallexpinstr')} />
                             </div>
                         </div>
                     </div>

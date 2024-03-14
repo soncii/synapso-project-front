@@ -83,6 +83,7 @@ const ProductCreator = () => {
             expname: '',
             expinstr: '',
             exptype: '',
+            recallexpinstr: '',
         });
 
         // Reset the states managed by useState
