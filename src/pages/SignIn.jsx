@@ -68,6 +68,7 @@ const SignIn = () => {
                                type="text"
                                placeholder="Enter your email"
                                {...register('email', {required: true, pattern: /^\S+@\S+$/i})}/>
+                        {errors.email && <span style={{ color: 'red' }}>This field is required</span>}
                     </div>
                     <Controller name="password"
                                 control={control}
@@ -80,6 +81,7 @@ const SignIn = () => {
                                                    onChange={field.onChange}
                                                    innerRef={field.ref}/>
                                 )}/>
+                    {errors.password && <span style={{ color: 'red' }}>This field is required</span>}
                     {error && <p style={{ color: 'red' }}>{error}</p>}
                     <button className={`btn btn--primary w-full mt-6 ${theme === 'light' ? 'green' : ''}`}
                             type="submit">
