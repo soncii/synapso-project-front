@@ -37,6 +37,7 @@ const ProductCreator = () => {
     const onSubmit = async (formData) => {
         const experimentData = {
                 instructionText: formData.expinstr,
+                recallInstructionText: formData.recallexpinstr,
                 name: formData.expname,
                 type: formData.exptype.value,
                 data: dataFields.map(field => ({
@@ -149,6 +150,15 @@ const ProductCreator = () => {
                                           id="expinstr"
                                           placeholder="Enter Experiment Instruction"
                                           {...register('expinstr')} />
+                            </div>
+                            <div className="field-wrapper">
+                                <label className="field-label" htmlFor="recallexpinstr">
+                                    Pre-Recall Stage Instruction
+                                </label>
+                                <textarea className="field-input !h-[88px] !py-4"
+                                          id="recallexpinstr"
+                                          placeholder="Please choose one word that you have seen before. Press start if you are ready to begin."
+                                          {...register('recallexpinstr')} />
                             </div>
                         </div>
                     </div>
