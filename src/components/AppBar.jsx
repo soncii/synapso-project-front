@@ -92,14 +92,14 @@ const AppBar = ({title}) => {
                     </div>
                     <span className="hidden h-[55px] border-l mr-[35px] ml-[30px] md:block"/>
                     <div className="hidden items-center gap-2.5 md:flex">
-                        <NavLink to="/settings">
+                        <NavLink to="/experiments">
                             <img className="w-10 h-10 rounded-full" src={user} alt="user"/>
                         </NavLink>
                         <div className="flex flex-col">
                             <span className="text-[15px] font-semibold text-header">
-                                Placeholder for name
+                                Temirtas Sapargaliyev
                             </span>
-                            <span className="text-xs">Admin</span>
+                            <span className="text-xs">Researcher</span>
                         </div>
                     </div>
                     <button className="btn-icon md:ml-10 4xl:hidden"
