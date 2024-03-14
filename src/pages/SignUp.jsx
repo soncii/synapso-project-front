@@ -52,7 +52,7 @@ const SignUp = () => {
             });
     
             if (response.ok) {
-                window.location.href = navigate('/sign-in');
+                navigate('/sign-in');
             } else {
                 // Handle errors
                 const errorData = await response.json();

@@ -47,7 +47,7 @@ const SignIn = () => {
         })
         .then(data => {
             localStorage.setItem('authToken', data);
-            window.location.href = navigate('/experiments');
+            navigate('/experiments');
         })
         .catch(err => {
             setError(err.message);
