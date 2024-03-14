@@ -51,7 +51,7 @@ const RecallExperiment = () => {
                 stimuli: dataFields.map(field => ({
                     data: field.dispdata,
                     delay: parseInt(field.delay, 10),
-                    cue: field.cue
+                    ...(!isFreeRecall && { cue: field.cue })
                 })),
             }
         };
@@ -79,7 +79,8 @@ const RecallExperiment = () => {
     };
 
     const addFieldGroup = () => {
-        setDataFields([...dataFields, { dispdata: '', cue: '', delay: '' }]);
+        const newField = isFreeRecall ? { dispdata: '', delay: '' } : { dispdata: '', cue: '', delay: '' };
+        setDataFields([...dataFields, newField]);
     };
 
     const handleReset = () => {
@@ -255,7 +256,7 @@ const RecallExperiment = () => {
                     <h2>Stimuli</h2>
                     <div>
                         {dataFields.map((field, index) => (
-                            <div key={index} className={`grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-4 ${index !== 0 ? 'mt-6' : ''}`}>
+                            <div key={index} className={`grid grid-cols-1 gap-3 md:grid-cols-${isFreeRecall ? '2' : '3'} md:gap-4 ${index !== 0 ? 'mt-6' : ''}`}>
                                 <div className="field-wrapper">
                                     <label className="field-label" htmlFor={`dispdata-${index}`}>
                                         Data
@@ -273,23 +274,25 @@ const RecallExperiment = () => {
                                         }}
                                     />
                                 </div>
-                                <div className="field-wrapper">
-                                    <label className="field-label" htmlFor={`cue-${index}`}>
-                                        Cue
-                                    </label>
-                                    <input
-                                        className={classNames('field-input', {'field-input--error': errors.cue})}
-                                        id={`cue-${index}`}
-                                        type="text"
-                                        placeholder="Enter cue"
-                                        value={field.cue}
-                                        onChange={e => {
-                                            const newDataFields = [...dataFields];
-                                            newDataFields[index].cue = e.target.value;
-                                            setDataFields(newDataFields);
-                                        }}
-                                    />
-                                </div>
+                                {!isFreeRecall && (
+                                    <div className="field-wrapper">
+                                        <label className="field-label" htmlFor={`cue-${index}`}>
+                                            Cue
+                                        </label>
+                                        <input
+                                            className={classNames('field-input', {'field-input--error': errors.cue})}
+                                            id={`cue-${index}`}
+                                            type="text"
+                                            placeholder="Enter cue"
+                                            value={field.cue}
+                                            onChange={e => {
+                                                const newDataFields = [...dataFields];
+                                                newDataFields[index].cue = e.target.value;
+                                                setDataFields(newDataFields);
+                                            }}
+                                        />
+                                    </div>
+                                )}
                                 <div className="field-wrapper">
                                     <label className="field-label" htmlFor={`delay-${index}`}>
                                         Delay
