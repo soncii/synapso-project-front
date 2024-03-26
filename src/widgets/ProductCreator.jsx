@@ -254,7 +254,7 @@ const ProductCreator = () => {
                                         className={classNames('field-input', {'field-input--error': errors.dispdata})}
                                         id={`dispdata-${index}`}
                                         type="text"
-                                        placeholder="Enter displayed text"
+                                        placeholder="Enter target data"
                                         value={field.dispdata}
                                         onChange={e => {
                                             const newDataFields = [...dataFields];
@@ -271,7 +271,7 @@ const ProductCreator = () => {
                                         className={classNames('field-input', {'field-input--error': errors.hiddata})}
                                         id={`hiddata-${index}`}
                                         type="text"
-                                        placeholder="Enter hidden text"
+                                        placeholder="Enter foiled data"
                                         value={field.hiddata}
                                         onChange={e => {
                                             const newDataFields = [...dataFields];
@@ -282,13 +282,13 @@ const ProductCreator = () => {
                                 </div>
                                 <div className="field-wrapper">
                                     <label className="field-label" htmlFor={`duration-${index}`}>
-                                        Display data
+                                        Display duration
                                     </label>
                                     <input
                                         className={classNames('field-input', {'field-input--error': errors.duration})}
                                         id={`duration-${index}`}
                                         type="number"
-                                        placeholder="Enter Duration"
+                                        placeholder="Enter display duration"
                                         value={field.duration}
                                         onChange={e => {
                                             const newDataFields = [...dataFields];
