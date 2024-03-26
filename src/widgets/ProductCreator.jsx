@@ -265,13 +265,13 @@ const ProductCreator = () => {
                                 </div>
                                 <div className="field-wrapper">
                                     <label className="field-label" htmlFor={`hiddata-${index}`}>
-                                        Foiled
+                                        Foil
                                     </label>
                                     <input
                                         className={classNames('field-input', {'field-input--error': errors.hiddata})}
                                         id={`hiddata-${index}`}
                                         type="text"
-                                        placeholder="Enter foiled data"
+                                        placeholder="Enter foil"
                                         value={field.hiddata}
                                         onChange={e => {
                                             const newDataFields = [...dataFields];
