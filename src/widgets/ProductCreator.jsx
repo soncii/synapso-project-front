@@ -248,7 +248,7 @@ const ProductCreator = () => {
                             <div key={index} className={`grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-4 ${index !== 0 ? 'mt-6' : ''}`}>
                                 <div className="field-wrapper">
                                     <label className="field-label" htmlFor={`dispdata-${index}`}>
-                                        Displayed Data
+                                        Target
                                     </label>
                                     <input
                                         className={classNames('field-input', {'field-input--error': errors.dispdata})}
@@ -265,7 +265,7 @@ const ProductCreator = () => {
                                 </div>
                                 <div className="field-wrapper">
                                     <label className="field-label" htmlFor={`hiddata-${index}`}>
-                                        Hidden Data
+                                        Foiled
                                     </label>
                                     <input
                                         className={classNames('field-input', {'field-input--error': errors.hiddata})}
@@ -282,7 +282,7 @@ const ProductCreator = () => {
                                 </div>
                                 <div className="field-wrapper">
                                     <label className="field-label" htmlFor={`duration-${index}`}>
-                                        Duration
+                                        Display data
                                     </label>
                                     <input
                                         className={classNames('field-input', {'field-input--error': errors.duration})}
